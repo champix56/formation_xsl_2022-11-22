@@ -4,7 +4,10 @@ factures
 }
 facture,client,lignes,ligne,destinataire,adr1,adr2{
 	display:block;
-	border:1px solid black;
+	border-width:1px;
+	border-style:solid;
+	border-color:black;
+	/*border:1px solid black;*/
 }
 facture{
 	height:287mm;
