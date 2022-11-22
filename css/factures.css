@@ -2,11 +2,17 @@ factures
 {
 	/*color: tomato;*/
 }
-facture,client,lignes,ligne{
+facture,client,lignes,ligne,destinataire,adr1,adr2{
 	display:block;
 	border:1px solid black;
 }
 facture{
 	height:287mm;
 	width:20cm;
+}
+client{
+	margin-top:3cm;
+	margin-left:12cm;
+	margin-right:1cm;
+	margin-bottom:3cm;
 }
