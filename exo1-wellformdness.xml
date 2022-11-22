@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE personnes SYSTEM "wellformdness.dtd">
 <personnes>
-	<personne id="01">
+	<personne id="P01">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
@@ -14,7 +15,7 @@
 		<ville>ERDEVEN</ville>
 		<pays>bretagne</pays>
 	</personne>
-	<personne id="02">
+	<personne id="P02">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
