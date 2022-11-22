@@ -1,4 +1,12 @@
 factures
 {
-	color: tomato;
+	/*color: tomato;*/
+}
+facture,client,lignes,ligne{
+	display:block;
+	border:1px solid black;
+}
+facture{
+	height:287mm;
+	width:20cm;
 }
