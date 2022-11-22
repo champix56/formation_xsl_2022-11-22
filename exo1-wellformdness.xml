@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personne>
+	<ident>
+		<nom>DESORBAIX</nom>
+		<prenom>Alexandre</prenom>
+		<prenom>Dominique</prenom>
+		<prenom>Joël</prenom>
+		<datenaiss>1984-08-03</datenaiss>
+	</ident>
+	<adr1>10 route de kerminihy</adr1>
+	<adr2>kerdelam</adr2>
+	<cp>56410</cp>
+	<vile>ERDEVEN</vile>
+	<pays>bretagne</pays>
+</personne>
