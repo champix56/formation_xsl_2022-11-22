@@ -11,7 +11,7 @@
 		<adr1>10 route de kerminihy</adr1>
 		<adr2>kerdelam</adr2>
 		<cp>56410</cp>
-		<vile>ERDEVEN</vile>
+		<ville>ERDEVEN</ville>
 		<pays>bretagne</pays>
 	</personne>
 	<personne>
@@ -25,7 +25,7 @@
 		<adr1>10 route de kerminihy</adr1>
 		<adr2>kerdelam</adr2>
 		<cp>56410</cp>
-		<vile>ERDEVEN</vile>
+		<ville>ERDEVEN</ville>
 		<pays>bretagne</pays>
 	</personne>
 </personnes>
