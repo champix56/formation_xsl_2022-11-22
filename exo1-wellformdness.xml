@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <personnes>
-	<personne>
+	<personne id="01">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
@@ -14,7 +14,7 @@
 		<ville>ERDEVEN</ville>
 		<pays>bretagne</pays>
 	</personne>
-	<personne>
+	<personne id="02">
 		<ident>
 			<nom>DESORBAIX</nom>
 			<prenom>Alexandre</prenom>
