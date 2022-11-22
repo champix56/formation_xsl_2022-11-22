@@ -25,4 +25,22 @@ client{
 	padding-left:0.5cm;
 	padding-bottom:0.5cm;*/
 	padding:0.5cm;
+	background-color:skyblue;
+	color:tomato;
 }
+ligne *{
+	display:inline-block;
+}
+ref{
+	width:4cm;
+	text-align:center;
+}
+designation{
+	width:8cm;
+}
+phtByUnit, nbUnit, stotligne{
+	/* methode avec calcul de taille restante */
+	width:calc( calc(100% - 8cm - 4cm - 4%) / 3);
+}
+/*suppression de l'affichage d'une balise*/
+surface{display:none;}
