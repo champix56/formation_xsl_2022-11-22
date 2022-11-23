@@ -3,9 +3,10 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<factures>
-			<xsl:for-each select="//facture">
-				<facture/>
-			</xsl:for-each>
+			<xsl:apply-templates select="//facture"/>
 		</factures>
+	</xsl:template>
+	<xsl:template match="facture">
+		<facture>une facture</facture>
 	</xsl:template>
 </xsl:stylesheet>
