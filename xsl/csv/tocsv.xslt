@@ -8,13 +8,19 @@
 	-->
 	<xsl:template match="/">numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;
 <xsl:for-each select="//facture">
-	<xsl:value-of select="@numfacture"/>;<xsl:value-of select="@datefacture"/>;<xsl:value-of select="@idclient"/>;<xsl:value-of select="count(.//ligne)"/>;<xsl:call-template name="calcul-totaux"/>
+	<xsl:value-of select="@numfacture"/>;<xsl:value-of select="@datefacture"/>;<xsl:value-of select="@idclient"/>;<xsl:value-of select="count(.//ligne)"/>;<xsl:call-template name="calcul-totaux">
+		<!--appel avec un param existant et declaré dans le template-->
+		<xsl:with-param name="total_ht" select="sum(.//stotligne)"/>
+	</xsl:call-template>
 </xsl:for-each>
 </xsl:template>
 <!--
 	equivalant a une methode dans d'autres languages
 	explicitement appelée par <xsl:call-template name="calcul-totaux"/>
 -->
-<xsl:template name="calcul-totaux">montant totaux;
+<xsl:template name="calcul-totaux">
+	<!--def d'un parametre d'entree a fournir lors de l'appele-->
+	<xsl:param name="total_ht"/>
+	<xsl:value-of select="$total_ht"/>;
 </xsl:template>
 </xsl:stylesheet>
