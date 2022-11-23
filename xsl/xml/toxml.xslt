@@ -9,8 +9,16 @@
 	<xsl:template match="facture">
 		<!--xpath dans des attributs ne supportant pas NATIVEMENT le xpath-->
 		<facture idfacture="{@numfacture}">
-			<xsl:attribute name="nomClient">
-				<xsl:variable name="idclientFromFacture" select="@idclient"/>
+			<!--passage de la creation de l'@ttrib par template match sur le noeud qui caracterise la donnée-->
+			<xsl:apply-templates select="@idclient"/>
+			<prixAvgArticle></prixAvgArticle>
+			<ligneAvg></ligneAvg>
+			<nbLignes></nbLignes>
+		</facture>
+	</xsl:template>
+	<xsl:template match="@idclient">
+		<xsl:attribute name="nomClient">
+				<xsl:variable name="idclientFromFacture" select="."/>
 				<!--recuperation & stockage d'un contenu xml externe au fichier principal-->
 				<xsl:variable name="doc_client" select="document( 'clients.xml' )/clients"/>
 				<!--
@@ -21,8 +29,6 @@
 				<xsl:variable name="un_client_depuis_doc_clients" select="$doc_client/client[@id=$idclientFromFacture]"/>
 				<xsl:value-of select="$un_client_depuis_doc_clients/destinataire"/>
 			</xsl:attribute>
-Une facture		
-		</facture>
 	</xsl:template>
 	<!--template echapant le traitement de facture type="devis"-->
 	<xsl:template match="facture[contains(@type,'evis')]"/>
