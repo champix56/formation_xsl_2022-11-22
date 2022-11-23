@@ -1,6 +1,6 @@
 numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;
-12;2012-08-10;123;3;montant totaux;
-23;2012-09-04;234;1;montant totaux;
-11;2012-07-05;234;1;montant totaux;
-08;2013-07-04;234;1;montant totaux;
-05;2012-06-21;132;3;montant totaux;
+12;2012-08-10;123;3;42.247;
+23;2012-09-04;234;1;74.625;
+11;2012-07-05;234;1;24.873;
+08;2013-07-04;234;1;69.65;
+05;2012-06-21;132;3;98.925;

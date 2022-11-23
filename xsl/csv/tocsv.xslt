@@ -7,7 +7,8 @@
 		point de depart de la transfo
 	-->
 	<xsl:template match="/">
-		<xsl:value-of select=" 'numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;' "/>
+		<xsl:value-of select=" 'numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;' "/><xsl:text>
+</xsl:text>
 		<xsl:for-each select="//facture">
 			<xsl:value-of select="concat(@numfacture,';')"/>
 			<xsl:value-of select="concat(@datefacture,';')"/>
