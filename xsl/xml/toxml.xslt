@@ -15,6 +15,7 @@
 				<xsl:variable name="doc_client" select="document( 'clients.xml' )/clients"/>
 				<!--correllation entre 2 valeurs issues de 2 arbres xml differents-->
 				<xsl:variable name="un_client_depuis_doc_clients" select="$doc_client/client[@id=$idclientFromFacture]"/>
+				<xsl:value-of select="$un_client_depuis_doc_clients/destinataire"/>
 			</xsl:attribute>
 Une facture		
 		</facture>
