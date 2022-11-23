@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factures xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="facturationtransfert.xsd">
+	<facture idfacture="12" nomClient="123">
+		<prixAvgArticle refproduits="REF-1934">8.28333333333333</prixAvgArticle>
+		<ligneAvg>14.08233333333333</ligneAvg>
+		<nbLignes>3</nbLignes>
+	</facture>
+	<facture idfacture="23" nomClient="234">
+		<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+		<ligneAvg>74.625</ligneAvg>
+		<nbLignes>1</nbLignes>
+	</facture>
+	<facture idfacture="11" nomClient="234">
+		<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+		<ligneAvg>24.873</ligneAvg>
+		<nbLignes>1</nbLignes>
+	</facture>
+	<facture idfacture="8" nomClient="234">
+		<prixAvgArticle refproduits="REF-2234">9.95</prixAvgArticle>
+		<ligneAvg>69.65</ligneAvg>
+		<nbLignes>1</nbLignes>
+	</facture>
+	<facture idfacture="5" nomClient="132">
+		<prixAvgArticle refproduits="REF-2135-2">7.61666666666667</prixAvgArticle>
+		<ligneAvg>32.975</ligneAvg>
+		<nbLignes>3</nbLignes>
+	</facture>
+</factures>
