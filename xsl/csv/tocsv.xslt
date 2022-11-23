@@ -7,5 +7,8 @@
 		point de depart de la transfo
 	-->
 	<xsl:template match="/">numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;
+<xsl:for-each select="//facture">
+	<xsl:value-of select="@numfacture"/>;<xsl:value-of select="@datefacture"/>;
+</xsl:for-each>
 </xsl:template>
 </xsl:stylesheet>
