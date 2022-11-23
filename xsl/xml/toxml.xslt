@@ -11,9 +11,9 @@
 		<facture idfacture="{@numfacture}">
 			<!--passage de la creation de l'@ttrib par template match sur le noeud qui caracterise la donnée-->
 			<xsl:apply-templates select="@idclient"/>
-			<prixAvgArticle></prixAvgArticle>
-			<ligneAvg></ligneAvg>
-			<nbLignes></nbLignes>
+			<prixAvgArticle><xsl:value-of select="sum(.//phtByUnit) div count(.//phtByUnit)"/></prixAvgArticle>
+			<ligneAvg><xsl:value-of select="sum(.//stotligne) div count(.//stotligne)"/></ligneAvg>
+			<nbLignes><xsl:value-of select="count(.//ligne)"/></nbLignes>
 		</facture>
 	</xsl:template>
 	<xsl:template match="@idclient">
