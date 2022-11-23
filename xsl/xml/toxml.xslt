@@ -9,4 +9,7 @@
 	<xsl:template match="facture">
 		<facture>une facture</facture>
 	</xsl:template>
+	<xsl:template match="facture[contains(@type,'evis')]">
+		<devis>une facture</devis>
+	</xsl:template>
 </xsl:stylesheet>
