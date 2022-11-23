@@ -7,7 +7,11 @@
 		point de depart de la transfo
 	-->
 	<xsl:template match="/">
-		<xsl:value-of select=" 'numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;' "/><xsl:text>
+		<xsl:value-of select=" 'numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;' "/>
+<!--preservation du contenu textuelle avec ou sans caracteres affichable dans la balise xsl text 
+!!!!!seul un saut de ligne sans espace est présent ici dans la balise text!!!!!! 
+-->
+<xsl:text>
 </xsl:text>
 		<xsl:for-each select="//facture">
 			<xsl:value-of select="concat(@numfacture,';')"/>
