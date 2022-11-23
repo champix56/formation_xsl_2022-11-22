@@ -23,6 +23,8 @@
 				<!--appel avec un param existant et declaré dans le template-->
 				<xsl:with-param name="total_ht" select="sum(.//stotligne)"/>
 			</xsl:call-template>
+			<xsl:text>
+</xsl:text>
 		</xsl:for-each>
 	</xsl:template>
 	<!--
@@ -36,6 +38,8 @@
 		<xsl:variable name="rounded_totalht" select="round($total_ht*100) div 100"/>
 		<xsl:variable name="rounded_totaltva" select="round($rounded_totalht* 20) div 100"/>
 		<!--expression des variables-->
-		<xsl:value-of select="$rounded_totalht"/>;<xsl:value-of select="$rounded_totaltva"/>;<xsl:value-of select="$rounded_totaltva + $rounded_totalht"/>;
+		<xsl:value-of select="concat($rounded_totalht,';')"/>
+		<xsl:value-of select="concat($rounded_totaltva,';')"/>
+		<xsl:value-of select="concat($rounded_totaltva + $rounded_totalht,';')"/>
 </xsl:template>
 </xsl:stylesheet>
