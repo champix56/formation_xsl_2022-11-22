@@ -9,7 +9,11 @@
 	<xsl:template match="facture">
 		<!--xpath dans des attributs ne supportant pas NATIVEMENT le xpath-->
 		<facture idfacture="{@numfacture}">
-		
+			<xsl:attribute name="nomClient">
+				<xsl:variable name="idclientFromFacture" select="@idclient"/>
+				<xsl:value-of select="$idclientFromFacture"/>
+			</xsl:attribute>
+Une facture		
 		</facture>
 	</xsl:template>
 	<!--template echapant le traitement de facture type="devis"-->
