@@ -7,9 +7,11 @@
 		</factures>
 	</xsl:template>
 	<xsl:template match="facture">
-		<facture>une facture</facture>
+		<!--xpath dans des attributs ne supportant pas NATIVEMENT le xpath-->
+		<facture idfacture="{@numfacture}">
+		
+		</facture>
 	</xsl:template>
-	<xsl:template match="facture[contains(@type,'evis')]">
-		<devis>une facture</devis>
-	</xsl:template>
+	<!--template echapant le traitement de facture type="devis"-->
+	<xsl:template match="facture[contains(@type,'evis')]"/>
 </xsl:stylesheet>
