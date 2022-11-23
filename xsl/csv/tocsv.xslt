@@ -6,7 +6,6 @@
 		declenchée automatiquement
 		point de depart de la transfo
 	-->
-	<xsl:template match="/">
-		Hello World / DEMAT BREIZH
-	</xsl:template>
+	<xsl:template match="/">numero de facture;date facture;idclient;nb de ligne;montant total ht;montant tva;montant ttc;
+</xsl:template>
 </xsl:stylesheet>
