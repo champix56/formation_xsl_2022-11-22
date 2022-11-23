@@ -13,6 +13,8 @@
 				<xsl:variable name="idclientFromFacture" select="@idclient"/>
 				<!--recuperation & stockage d'un contenu xml externe au fichier principal-->
 				<xsl:variable name="doc_client" select="document( 'clients.xml' )/clients"/>
+				<!--correllation entre 2 valeurs issues de 2 arbres xml differents-->
+				<xsl:variable name="un_client_depuis_doc_clients" select="$doc_client/client[@id=$idclientFromFacture]"/>
 			</xsl:attribute>
 Une facture		
 		</facture>
