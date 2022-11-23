@@ -11,7 +11,8 @@
 		<facture idfacture="{@numfacture}">
 			<xsl:attribute name="nomClient">
 				<xsl:variable name="idclientFromFacture" select="@idclient"/>
-				<xsl:value-of select="$idclientFromFacture"/>
+				<!--recuperation & stockage d'un contenu xml externe au fichier principal-->
+				<xsl:variable name="doc_client" select="document( 'clients.xml' )/clients"/>
 			</xsl:attribute>
 Une facture		
 		</facture>
