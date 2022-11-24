@@ -29,6 +29,15 @@
 							margin-right:20%;
 							border:1px solid black;
 						}
+						table{
+							width:80%;
+							margin-left:10%;
+							margin-right:10%;
+							border-spacing:0;
+						}
+						td{
+							border:1px solid black;
+						}
 				</style>
 			</head>
 			<body>

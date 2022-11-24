@@ -1,0 +1,169 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css">
+						.class_facture{
+						/*contenu css de la class facture*/
+						
+						/*saut de page "avant la balise" lors de l'impression uniquement*/
+							page-break-before:always;
+							height:287mm;
+							border-bottom:1px solid grey;
+						}
+						.class_numfacture{
+							text-align:center;
+							padding:5mm 10mm;
+							margin-bottom:1cm;
+							margin-top:4cm;
+							width:60%;
+							margin-left:20%;
+							margin-right:20%;
+							border:1px solid black;
+						}
+						table{
+							width:80%;
+							margin-left:10%;
+							margin-right:10%;
+							border-spacing:0;
+						}
+						td{
+							border:1px solid black;
+						}
+				</style>
+	</head>
+	<body>
+		<h1>Liste des factures</h1>
+		<ul>
+			<li><a href="#F-12">Devis N° 12</a></li>
+			<li><a href="#F-23">Facture N° 23</a></li>
+			<li><a href="#F-11">Facture N° 11</a></li>
+			<li><a href="#F-08">Devis N° 08</a></li>
+			<li><a href="#F-05">Facture N° 05</a></li>
+		</ul>
+		<hr>
+		<div class="class_facture" id="F-12">
+			<div class="class_numfacture">Devis N° 12</div>
+			<table>
+				<tr>
+					<th>ref</th>
+					<th>designation</th>
+					<th>€/Unit</th>
+					<th>quant.</th>
+					<th>s-total</th>
+				</tr>
+				<tr>
+					<td>REF-2134</td>
+					<td>Lavage SOL </td>
+					<td>5,95€</td>
+					<td>1,50</td>
+					<td>8,92€</td>
+				</tr>
+				<tr>
+					<td>REF-2135</td>
+					<td>Peinture SOL forfait &lt;20m² </td>
+					<td>8,95€</td>
+					<td>1,50</td>
+					<td>13,42€</td>
+				</tr>
+				<tr>
+					<td>REF-1934</td>
+					<td>Peinture Blanc pot 5L</td>
+					<td>9,95€</td>
+					<td>2,00</td>
+					<td>19,90€</td>
+				</tr>
+			</table>
+		</div>
+		<div class="class_facture" id="F-23">
+			<div class="class_numfacture">Facture N° 23</div>
+			<table>
+				<tr>
+					<th>ref</th>
+					<th>designation</th>
+					<th>€/Unit</th>
+					<th>quant.</th>
+					<th>s-total</th>
+				</tr>
+				<tr>
+					<td>REF-2234</td>
+					<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+					<td>9,95€</td>
+					<td>0,50</td>
+					<td>74,62€</td>
+				</tr>
+			</table>
+		</div>
+		<div class="class_facture" id="F-11">
+			<div class="class_numfacture">Facture N° 11</div>
+			<table>
+				<tr>
+					<th>ref</th>
+					<th>designation</th>
+					<th>€/Unit</th>
+					<th>quant.</th>
+					<th>s-total</th>
+				</tr>
+				<tr>
+					<td>REF-2234</td>
+					<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+					<td>9,95€</td>
+					<td>0,50</td>
+					<td>24,87€</td>
+				</tr>
+			</table>
+		</div>
+		<div class="class_facture" id="F-08">
+			<div class="class_numfacture">Devis N° 08</div>
+			<table>
+				<tr>
+					<th>ref</th>
+					<th>designation</th>
+					<th>€/Unit</th>
+					<th>quant.</th>
+					<th>s-total</th>
+				</tr>
+				<tr>
+					<td>REF-2234</td>
+					<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+					<td>9,95€</td>
+					<td>0,50</td>
+					<td>69,65€</td>
+				</tr>
+			</table>
+		</div>
+		<div class="class_facture" id="F-05">
+			<div class="class_numfacture">Facture N° 05</div>
+			<table>
+				<tr>
+					<th>ref</th>
+					<th>designation</th>
+					<th>€/Unit</th>
+					<th>quant.</th>
+					<th>s-total</th>
+				</tr>
+				<tr>
+					<td>REF-2234</td>
+					<td>Pose BA13 (forfait plaque +MO) au m2 </td>
+					<td>9,95€</td>
+					<td>0,50</td>
+					<td>69,65€</td>
+				</tr>
+				<tr>
+					<td>REF-2134</td>
+					<td>Lavage SOL </td>
+					<td>5,95€</td>
+					<td>2,00</td>
+					<td>11,90€</td>
+				</tr>
+				<tr>
+					<td>REF-2135-2</td>
+					<td>Peinture SOL forfait &gt;20m² </td>
+					<td>6,95€</td>
+					<td>2,50</td>
+					<td>17,38€</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
