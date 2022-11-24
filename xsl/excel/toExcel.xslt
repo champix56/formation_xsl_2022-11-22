@@ -4,6 +4,7 @@
 	<xsl:template match="/">
 		<!--	<?xml version="1.0"?>
 <?mso-application progid="Excel.Sheet"?>-->
+		<xsl:processing-instruction name="mso-application">progid="Excel.Sheet"</xsl:processing-instruction>
 		<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
 			<DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
 				<Author>champix</Author>
@@ -218,7 +219,9 @@
 							<Data ss:Type="String">Nombre de factures : </Data>
 						</Cell>
 						<Cell ss:StyleID="s88">
-							<Data ss:Type="Number">200</Data>
+							<Data ss:Type="Number">
+								<xsl:value-of select="count(//facture)"/>
+							</Data>
 						</Cell>
 						<Cell ss:StyleID="s88"/>
 						<Cell ss:StyleID="s89"/>
@@ -230,7 +233,9 @@
 							<Data ss:Type="String">Montant total des factures </Data>
 						</Cell>
 						<Cell ss:StyleID="s92">
-							<Data ss:Type="Number">315</Data>
+							<Data ss:Type="Number">
+								<xsl:value-of select="sum(//stotligne)"/>
+							</Data>
 						</Cell>
 						<Cell ss:StyleID="s88"/>
 						<Cell ss:StyleID="s89"/>
