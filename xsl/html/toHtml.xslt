@@ -4,7 +4,7 @@
 	<xsl:template match="/">
 		<html>
 			<head>
-				<title></title>
+				<title/>
 				<style type="text/css">
 						.class_facture{
 						/*contenu css de la class facture*/
@@ -26,11 +26,20 @@
 		</html>
 	</xsl:template>
 	<xsl:template match="facture">
-		<li><a href="#F-{@numfacture}">facture N°xx</a></li>
+		<li>
+			<a href="#F-{@numfacture}">
+				<xsl:apply-templates select="@numfacture"/>
+			</a>
+		</li>
 	</xsl:template>
 	<xsl:template match="facture" mode="facture-body">
 		<div class="class_facture" id="F-{@numfacture}">
-			une facture
+			<div class="class_numfacture">
+				<xsl:apply-templates select="@numfacture"/>
+			</div>
 		</div>
+	</xsl:template>
+	<xsl:template match="@numfacture">
+		Facture N° <xsl:value-of select="."/>
 	</xsl:template>
 </xsl:stylesheet>
