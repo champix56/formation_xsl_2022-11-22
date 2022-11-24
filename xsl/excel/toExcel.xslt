@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40">
 	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
 	<xsl:template match="/">
 		<!--	<?xml version="1.0"?>
@@ -182,7 +182,7 @@
 				</Style>
 			</Styles>
 			<Worksheet ss:Name="Feuil1">
-				<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="14" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="62.400000000000006" ss:DefaultRowHeight="14.4">
+				<Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="{14 + count(//facture) - 1}" x:FullColumns="1" x:FullRows="1" ss:DefaultColumnWidth="62.400000000000006" ss:DefaultRowHeight="14.4">
 					<Column ss:AutoFitWidth="0" ss:Width="19.2"/>
 					<Column ss:Index="5" ss:Width="91.8"/>
 					<Column ss:Width="77.399999999999991"/>
@@ -293,25 +293,7 @@
 						<Cell ss:StyleID="s110"/>
 						<Cell ss:StyleID="s89"/>
 					</Row>
-					<Row>
-						<Cell ss:StyleID="s87"/>
-						<Cell ss:StyleID="s86">
-							<Data ss:Type="Number">1252</Data>
-						</Cell>
-						<Cell ss:StyleID="s111">
-							<Data ss:Type="Number">111111</Data>
-						</Cell>
-						<Cell ss:StyleID="s111">
-							<Data ss:Type="Number">555555</Data>
-						</Cell>
-						<Cell ss:StyleID="s111">
-							<Data ss:Type="Number">999999</Data>
-						</Cell>
-						<Cell ss:StyleID="s84">
-							<Data ss:Type="Number">2222222</Data>
-						</Cell>
-						<Cell ss:StyleID="s89"/>
-					</Row>
+					<xsl:apply-templates select="//facture"/>
 					<Row ss:Height="15">
 						<Cell ss:StyleID="s87"/>
 						<Cell ss:StyleID="s112"/>
@@ -364,5 +346,26 @@
 				</WorksheetOptions>
 			</Worksheet>
 		</Workbook>
+	</xsl:template>
+	<xsl:template match="facture">
+				<Row>
+						<Cell ss:StyleID="s87"/>
+						<Cell ss:StyleID="s86">
+							<Data ss:Type="Number"><xsl:value-of select="@numfacture"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="@idclient"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="count(.//ligne)"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="sum(.//stotligne)"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s84">
+							<Data ss:Type="Number"><xsl:value-of select="sum(.//stotligne)*1.20"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s89"/>
+					</Row>
 	</xsl:template>
 </xsl:stylesheet>
