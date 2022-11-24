@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:output method="html" encoding="UTF-8" indent="yes" doctype-public="-//W3C//DTD HTML 4.01 Transitional//EN" doctype-system="http://www.w3.org/TR/html4/loose.dtd"/>
+	<!--
+		def. des particularité linguistiques d'un format de nombre a appliqué dans un format-number(node,'picture', 'euro-format')
+		!!!non obligatoire en cas d'usage sur les standards numeriques americains (sparateur decimal / group, ...)
+	-->
+	<xsl:decimal-format name="euro-format" decimal-separator="," grouping-separator=" "/>
 	<xsl:template match="/">
 		<html>
 			<head>
@@ -63,8 +68,10 @@
 	</xsl:template>
 	<!--niveau de priority implicite equivalant(emit par la complexité du match ici similaire a ligne/*)  donc attrib priority pour elever la priorité-->
 	<xsl:template match="ligne/phtByUnit | ligne/stotligne" priority="2">
-		<td>une cell specifique</td>
+		<!--usage avec decimal format. utilisation possible sans decimal format si le pattern respect le standar (. pour le decimal par exemple)-->
+		<td><xsl:value-of select="format-number(.,'# ##0,00€','euro-format')"/></td>
 	</xsl:template>
+	<!--template pour un enfnt de ligne sans specification particuliere-->
 	<xsl:template match="ligne/*">
 		<td>
 			<xsl:value-of select="."/>
