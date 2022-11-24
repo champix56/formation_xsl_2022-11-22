@@ -12,6 +12,17 @@
 						/*saut de page "avant la balise" lors de l'impression uniquement*/
 							page-break-before:always;
 							height:287mm;
+							border-bottom:1px solid grey;
+						}
+						.class_numfacture{
+							text-align:center;
+							padding:5mm 10mm;
+							margin-bottom:1cm;
+							margin-top:4cm;
+							width:60%;
+							margin-left:20%;
+							margin-right:20%;
+							border:1px solid black;
 						}
 				</style>
 			</head>
