@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes" />
 	<xsl:template match="/">
-		<xsl:apply-templates select="factures"/>
+		<!--mise en oeuvre d'un schema en sortie 
+			!!!a l'acces au schema pour le fichier generer en sortie
+			!!! non applicable aux balise faites ar xsl:element
+	
+			xmlns:xsi permet l'usage d'attribut de def. de schema
+			xsi:noNamescpaceSchemaLocation permet la declaration du chemin du schema 
+					si le contenu generer n'a pas d'espace de nom explicit qui lui est propre
+	
+			xsi:schemaLocation si le fichier de sortie possede des espace de noms/prefixe en sortie 
+				(avec declaration obligatoire de chacun des espaces de noms present en sortie avec 
+					xmlns:prefix="chaine")
+			-->
+		<facturation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://clanphs.free.fr/orsys/xml/facturationtransfert.xsd">
+			<xsl:apply-templates select="factures"/>
+		</facturation>
 	</xsl:template>
 	<xsl:template match="*">
 		<!--
