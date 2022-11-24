@@ -304,18 +304,18 @@
 						<Cell ss:StyleID="s89"/>
 					</Row>
 					<Row ss:Height="18">
-						<Cell ss:StyleID="s22"/>
-						<Cell ss:StyleID="s16"/>
-						<Cell ss:MergeAcross="1" ss:StyleID="s44">
+						<Cell ss:StyleID="s87"/>
+						<Cell ss:StyleID="s81"/>
+						<Cell ss:MergeAcross="1" ss:StyleID="s82">
 							<Data ss:Type="String">SOMME total</Data>
 						</Cell>
-						<Cell ss:StyleID="s18" ss:Formula="=SUM(R[-2]C:R[-2]C)">
-							<Data ss:Type="Number">999999</Data>
+						<Cell ss:StyleID="s83" ss:Formula="=SUM(R[-2]C:R[-{count(//facture)+1}]C)">
+							<Data ss:Type="Number"><xsl:value-of select="sum(//stotligne)"/></Data>
 						</Cell>
-						<Cell ss:StyleID="s18" ss:Formula="=SUM(R[-2]C:R[-2]C)">
-							<Data ss:Type="Number">2222222</Data>
+						<Cell ss:StyleID="s83"  ss:Formula="=SUM(R[-2]C:R[-{count(//facture)+1}]C)">
+							<Data ss:Type="Number"><xsl:value-of select="sum(//stotligne)*1.20"/></Data>
 						</Cell>
-						<Cell ss:StyleID="s24"/>
+						<Cell ss:StyleID="s89"/>
 					</Row>
 					<Row>
 						<Cell ss:StyleID="s93"/>
@@ -348,34 +348,24 @@
 		</Workbook>
 	</xsl:template>
 	<xsl:template match="facture">
-		<Row>
-			<Cell ss:StyleID="s87"/>
-			<Cell ss:StyleID="s86">
-				<Data ss:Type="Number">
-					<xsl:value-of select="@numfacture"/>
-				</Data>
-			</Cell>
-			<Cell ss:StyleID="s111">
-				<Data ss:Type="Number">
-					<xsl:value-of select="@idclient"/>
-				</Data>
-			</Cell>
-			<Cell ss:StyleID="s111">
-				<Data ss:Type="Number">
-					<xsl:value-of select="count(.//ligne)"/>
-				</Data>
-			</Cell>
-			<Cell ss:StyleID="s111">
-				<Data ss:Type="Number">
-					<xsl:value-of select="sum(.//stotligne)"/>
-				</Data>
-			</Cell>
-			<Cell ss:StyleID="s84">
-				<Data ss:Type="Number">
-					<xsl:value-of select="sum(.//stotligne)*1.20"/>
-				</Data>
-			</Cell>
-			<Cell ss:StyleID="s89"/>
-		</Row>
+				<Row>
+						<Cell ss:StyleID="s87"/>
+						<Cell ss:StyleID="s86">
+							<Data ss:Type="Number"><xsl:value-of select="@numfacture"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="@idclient"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="count(.//ligne)"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s111">
+							<Data ss:Type="Number"><xsl:value-of select="sum(.//stotligne)"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s84">
+							<Data ss:Type="Number"><xsl:value-of select="sum(.//stotligne)*1.20"/></Data>
+						</Cell>
+						<Cell ss:StyleID="s89"/>
+					</Row>
 	</xsl:template>
 </xsl:stylesheet>
