@@ -11,13 +11,19 @@
 			</head>
 			<body>
 				<h1>Liste des factures</h1>
+				<ul>
+					<xsl:apply-templates select="//facture"/>
+				</ul>
 				<hr/>
-				<xsl:apply-templates select="//facture"/>
+				<xsl:apply-templates select="//facture" mode="facture-body"/>
 			</body>
 		</html>
 	</xsl:template>
 	<xsl:template match="facture">
-		<div class="class_facture">
+		<li><a href="#F-{@numfacture}">facture N°xx</a></li>
+	</xsl:template>
+	<xsl:template match="facture" mode="facture-body">
+		<div class="class_facture" id="F-{@numfacture}">
 			une facture
 		</div>
 	</xsl:template>
