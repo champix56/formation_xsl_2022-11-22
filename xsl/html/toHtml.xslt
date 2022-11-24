@@ -5,8 +5,20 @@
 		<html>
 			<head>
 				<title></title>
+				<style type="text/css">
+						.class_facture{/*contenu css de la class facture*/}
+				</style>
 			</head>
-			<body></body>
+			<body>
+				<h1>Liste des factures</h1>
+				<hr/>
+				<xsl:apply-templates select="//facture"/>
+			</body>
 		</html>
+	</xsl:template>
+	<xsl:template match="facture">
+		<div class="class_facture">
+			une facture
+		</div>
 	</xsl:template>
 </xsl:stylesheet>
