@@ -14,7 +14,7 @@
 	<xs:element name="facturation">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element ref="statFile"/>
+				<xs:element ref="statFile" minOccurs="0"/>
 				<xs:element ref="stat-factures"/>
 			</xs:sequence>
 			<xs:attribute name="dateTransfert" type="xs:date" use="required"/>
