@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<xsl:include href="lib.factures.@numfacture.html.xslt"/>
+
 	<xsl:template match="ligne">
 		<tr>
 			<xsl:apply-templates select="*[not(name()='surface')]"/>
@@ -41,12 +43,6 @@
 			<xsl:apply-templates select=".//ligne"/>
 			<xsl:call-template name="total-facture"/>
 		</table>
-	</xsl:template>
-	<xsl:template match="@numfacture">
-		<xsl:choose>
-			<xsl:when test="contains(../@type,'evis')">Devis</xsl:when>
-			<xsl:otherwise>Facture</xsl:otherwise>
-		</xsl:choose> N° <xsl:value-of select="."/>
 	</xsl:template>
 	<xsl:template name="total-facture">
 		<xsl:param name="nodesetFacture" select="."/>
