@@ -71,6 +71,10 @@
 		<!--usage avec decimal format. utilisation possible sans decimal format si le pattern respect le standar (. pour le decimal par exemple)-->
 		<td><xsl:value-of select="format-number(.,'# ##0,00€','euro-format')"/></td>
 	</xsl:template>
+	<xsl:template match="ligne/nbUnit" priority="2">
+		<!--usage avec decimal format. utilisation possible sans decimal format si le pattern respect le standar (. pour le decimal par exemple)-->
+		<td><xsl:value-of select="format-number(.,'# ##0,00','euro-format')"/></td>
+	</xsl:template>
 	<!--template pour un enfnt de ligne sans specification particuliere-->
 	<xsl:template match="ligne/*">
 		<td>
