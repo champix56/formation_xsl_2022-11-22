@@ -61,7 +61,7 @@
 			<td><xsl:value-of select="stotligne"/></td-->
 		</tr>
 	</xsl:template>
-	<!--niveau de priority implicite(emit par la complexité du match) equivalant donc attrib priority pour elever la priorité face a ligne/*-->
+	<!--niveau de priority implicite equivalant(emit par la complexité du match ici similaire a ligne/*)  donc attrib priority pour elever la priorité-->
 	<xsl:template match="ligne/phtByUnit | ligne/stotligne" priority="2">
 		<td>une cell specifique</td>
 	</xsl:template>
