@@ -6,7 +6,13 @@
 			<head>
 				<title></title>
 				<style type="text/css">
-						.class_facture{/*contenu css de la class facture*/}
+						.class_facture{
+						/*contenu css de la class facture*/
+						
+						/*saut de page "avant la balise" lors de l'impression uniquement*/
+							page-break-before:always;
+							height:287mm;
+						}
 				</style>
 			</head>
 			<body>
