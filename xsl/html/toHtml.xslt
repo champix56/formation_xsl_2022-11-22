@@ -48,7 +48,39 @@
 			<div class="class_numfacture">
 				<xsl:apply-templates select="@numfacture"/>
 			</div>
+			<xsl:apply-templates select="lignes"/>
 		</div>
+	</xsl:template>
+	<xsl:template match="ligne">
+		<tr>
+			<xsl:apply-templates select="*[not(name()='surface')]"/>
+			<!--td><xsl:value-of select="ref"/></td>
+			<td><xsl:value-of select="designation"/></td>
+			<td><xsl:value-of select="nbUnit"/></td>
+			<td><xsl:value-of select="phtByUnit"/></td>
+			<td><xsl:value-of select="stotligne"/></td-->
+		</tr>
+	</xsl:template>
+	<!--niveau de priority implicite(emit par la complexité du match) equivalant donc attrib priority pour elever la priorité face a ligne/*-->
+	<xsl:template match="ligne/phtByUnit | ligne/stotligne" priority="2">
+		<td>une cell specifique</td>
+	</xsl:template>
+	<xsl:template match="ligne/*">
+		<td>
+			<xsl:value-of select="."/>
+		</td>
+	</xsl:template>
+	<xsl:template match="lignes">
+		<table>
+			<tr>
+				<th>ref</th>
+				<th>designation</th>
+				<th>€/Unit</th>
+				<th>quant.</th>
+				<th>s-total</th>
+			</tr>
+			<xsl:apply-templates select=".//ligne"/>
+		</table>
 	</xsl:template>
 	<xsl:template match="@numfacture">
 		<xsl:choose>
