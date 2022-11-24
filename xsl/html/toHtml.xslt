@@ -40,6 +40,9 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="@numfacture">
-		Facture N° <xsl:value-of select="."/>
+		<xsl:choose>
+			<xsl:when test="contains(../@type,'evis')">Devis</xsl:when>
+			<xsl:otherwise>Facture</xsl:otherwise>
+		</xsl:choose> N° <xsl:value-of select="."/>
 	</xsl:template>
 </xsl:stylesheet>
