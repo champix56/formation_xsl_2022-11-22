@@ -36,54 +36,45 @@
 			</fo:layout-master-set>
 			<!--demarage section de pages-->
 			<fo:page-sequence master-reference="A4Conditionnel">
+				<!--contenu des region automatiquement répliqués sur chaques pages mise en oeuvre par fop pour tout le page-sequence-->
+				<fo:static-content flow-name="xsl-region-before">
+					<fo:block text-align="center" font-weight="900" font-style="italic">
+						<xsl:value-of select="/photos/titre"/>
+					</fo:block>
+				</fo:static-content>
 				<fo:flow flow-name="xsl-region-body">
 					<fo:block>
-							<xsl:apply-templates select="//couv"/>
-							<xsl:apply-templates select="//page"/>
+						<xsl:apply-templates select="//couv"/>
+						<xsl:apply-templates select="//page"/>
 					</fo:block>
 				</fo:flow>
 			</fo:page-sequence>
 		</fo:root>
 	</xsl:template>
 	<xsl:template match="couv">
-		<fo:page-sequence master-reference="A4Couv">
-			<fo:flow flow-name="xsl-region-body">
-				<fo:block text-align="center">
-					<fo:block color="skyblue" font-size="32pt" margin-bottom="4cm" margin-top="6cm">
-						<xsl:value-of select="/photos/titre"/>
-					</fo:block>
-					<fo:external-graphic scaling="uniform" src="{image/@path}{image/@href}" content-height="10cm" content-width="20cm"/>
-				</fo:block>
-			</fo:flow>
-		</fo:page-sequence>
+		<fo:block text-align="center" break-after="page">
+			<fo:block color="skyblue" font-size="32pt" margin-bottom="4cm" margin-top="6cm">
+				<xsl:value-of select="/photos/titre"/>
+			</fo:block>
+			<fo:external-graphic scaling="uniform" src="{image/@path}{image/@href}" content-height="10cm" content-width="20cm"/>
+		</fo:block>
 	</xsl:template>
 	<xsl:template match="page">
-		<fo:page-sequence master-reference="A4">
-			<!--contenu des region automatiquement répliqués sur chaques pages mise en oeuvre par fop pour tout le page-sequence-->
-			<fo:static-content flow-name="xsl-region-before">
-				<fo:block text-align="center" font-weight="900" font-style="italic">
-					<xsl:value-of select="/photos/titre"/>
-				</fo:block>
-			</fo:static-content>
-			<!--flux principal de contenu a mettre en oeuvre dans DES pages-->
-			<fo:flow flow-name="xsl-region-body">
-				<!--block principal de conteneur structurel fo:flow avec css (text-align)-->
-				<fo:block text-align="center">
-					<fo:table width="20cm">
-						<fo:table-body>
-							<fo:table-row height="13cm">
-								<xsl:apply-templates select="image[position()&lt;3]"/>
-							</fo:table-row>
-							<xsl:if test="count(image)>2">
-								<fo:table-row height="13cm">
-									<xsl:apply-templates select="image[position()&gt;=3]"/>
-								</fo:table-row>
-							</xsl:if>
-						</fo:table-body>
-					</fo:table>
-				</fo:block>
-			</fo:flow>
-		</fo:page-sequence>
+		<!--block principal de conteneur structurel fo:flow avec css (text-align)-->
+		<fo:block text-align="center" break-after="page">
+			<fo:table width="20cm">
+				<fo:table-body>
+					<fo:table-row height="13cm">
+						<xsl:apply-templates select="image[position()&lt;3]"/>
+					</fo:table-row>
+					<xsl:if test="count(image)>2">
+						<fo:table-row height="13cm">
+							<xsl:apply-templates select="image[position()&gt;=3]"/>
+						</fo:table-row>
+					</xsl:if>
+				</fo:table-body>
+			</fo:table>
+		</fo:block>
 	</xsl:template>
 	<xsl:template match="page/image">
 		<fo:table-cell width="10cm">
