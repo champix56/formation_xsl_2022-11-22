@@ -51,6 +51,24 @@
 		<fo:table-cell width="10cm">
 			<fo:block text-align="center">
 				<fo:external-graphic src="{@path}{@href}" content-height="98mm" content-width="98mm" scaling="uniform"/>
+				<fo:block>
+					<xsl:value-of select="."/>
+				</fo:block>
+				<xsl:if test="/photos/@OnlyComment='false'">
+					<xsl:value-of select="@href"/>
+				</xsl:if>
+			</fo:block>
+		</fo:table-cell>
+	</xsl:template>
+	<!--echapement pour les images dont l'extension est SVG pour etre traité en tant que flux xml-->
+	<xsl:template match="page/image[   substring(@href,string-length(@href)-2)='svg' ]">
+		<fo:table-cell width="10cm">
+			<fo:block text-align="center">
+				<fo:instream-foreign-object content-height="98mm" content-width="98mm" scaling="uniform">
+					<xsl:variable name="docSVG" select="document(concat(@path,@href))/*"/>
+					<!--copie complete sans changement de tout le contenu XML de la variable-->
+					<xsl:copy-of select="$docSVG"/>
+				</fo:instream-foreign-object>
 			</fo:block>
 		</fo:table-cell>
 	</xsl:template>
