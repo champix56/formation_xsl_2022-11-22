@@ -141,7 +141,8 @@
 					<!-- equiv en 2.0 ->  <xsl:variable name="maxValue" select="max(//ligneAvg)"/>   -->
 					<xsl:variable name="pasHauteur" select="100 div $maxValue"/>
 					<xsl:for-each select="facture">
-						<rect x="{((position()-1)*20)+6}" y="100" width="20" height="{ligneAvg * $pasHauteur}" fill="url(#effetArrondiVertical)"/>
+					<xsl:variable name="hauteur" select="ligneAvg * $pasHauteur"/>
+						<rect x="{((position()-1)*20)+6}" y="{100 - $hauteur}" width="20" height="{$hauteur}" fill="url(#effetArrondiVertical)"/>
 					</xsl:for-each>
 					<use xlink:href="#Axes" x="-15" y="0"/>
 				</svg>
