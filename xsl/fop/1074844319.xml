@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<photos xmlns:fo="http://www.w3.org/1999/XSL/Format" theme="C:\Users\champix\AppData\Roaming\fond580576708.png" OnlyComment="false" intercal="true">
+<photos xmlns:fo="http://www.w3.org/1999/XSL/Format" theme="file:///C:/Users/champix/AppData/Roaming/fond580576708.png" OnlyComment="false" intercal="true">
 	<titre>Album XSL</titre>
 	<couv>
-		<image href="H97C9583_1R_DxOFP.JPG" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
+		<image href="H97C9583_1R_DxOFP.JPG" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
 	</couv>
 	<pages titre="true">
 		<page>
-			<image href="10603059_10152666856762884_1968346443_n.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\">versailles</image>
-			<image href="10616075_10152664721277884_204613508926358332_n.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\">feux 2</image>
-			<image href="H97C6399-Copier.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\">voie lactée</image>
-			<image href="H97C6499-Copier.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\">voie lactée chartres</image>
+			<image href="10603059_10152666856762884_1968346443_n.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/">versailles</image>
+			<image href="10616075_10152664721277884_204613508926358332_n.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/">feux 2</image>
+			<image href="H97C6399-Copier.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/">voie lactée</image>
+			<image href="H97C6499-Copier.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/">voie lactée chartres</image>
 		</page>
 		<page>
-			<image href="H97C9583_1R_DxOFP.JPG" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\">erdeven</image>
-			<image href="H97C9974-r2.JPG" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="H97C9974_DxOFPSigned.JPG" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="MG_0157_8_9_tonemappedEPRUVE-EPRUVEL.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
+			<image href="H97C9583_1R_DxOFP.JPG" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/">erdeven</image>
+			<image href="H97C9974-r2.JPG" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="H97C9974_DxOFPSigned.JPG" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="MG_0157_8_9_tonemappedEPRUVE-EPRUVEL.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
 		</page>
 		<page>
-			<image href="MG_1932_DxOEPREUVE-EPRUVEL.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="quiberonCoteSauvage-688x458.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="SH97C9989.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="S_H97C7350b.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
+			<image href="MG_1932_DxOEPREUVE-EPRUVEL.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="quiberonCoteSauvage-688x458.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="SH97C9989.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="S_H97C7350b.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
 		</page>
 		<page>
-			<image href="S_H97C9008.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
-			<image href="S_H97C9173.jpg" path="G:\partage\xsl\formation_xsl_2022-11-22\xsl\fop\photos\"/>
+			<image href="S_H97C9008.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
+			<image href="S_H97C9173.jpg" path="file:///G:/partage/xsl/formation_xsl_2022-11-22/xsl/fop/photos/"/>
 		</page>
 	</pages>
 	<signature>desorbaix@free.fr</signature>
