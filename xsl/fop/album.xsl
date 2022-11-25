@@ -10,7 +10,7 @@
 				-->
 				<fo:simple-page-master master-name="A4" page-height="297mm" page-width="210mm">
 					<!--decl. des regions disponibles-->
-					<fo:region-body margin-top="1cm"/>
+					<fo:region-body margin-top="1cm" background-image="{/photos/@theme}"/>
 					<fo:region-before extent="1cm" />
 					<fo:region-after extent="5mm"/>
 				</fo:simple-page-master>
