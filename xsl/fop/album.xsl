@@ -14,10 +14,26 @@
 					<fo:region-before extent="1cm"/>
 					<fo:region-after extent="5mm"/>
 				</fo:simple-page-master>
+				<fo:simple-page-master master-name="A4Couv" page-height="297mm" page-width="210mm">
+					<fo:region-body background-image="{/photos/@theme}"/>
+				</fo:simple-page-master>
 			</fo:layout-master-set>
 			<!--demarage section de pages-->
+			<xsl:apply-templates select="//couv"/>
 			<xsl:apply-templates select="//page"/>
 		</fo:root>
+	</xsl:template>
+	<xsl:template match="couv">
+		<fo:page-sequence master-reference="A4Couv">
+			<fo:flow flow-name="xsl-region-body">
+				<fo:block text-align="center">
+					<fo:block color="skyblue" font-size="32pt" margin-bottom="4cm" margin-top="6cm">
+						<xsl:value-of select="/photos/titre"/>
+					</fo:block>
+					<fo:external-graphic scaling="uniform" src="{image/@path}{image/@href}" content-height="10cm" content-width="20cm"/>
+				</fo:block>
+			</fo:flow>
+		</fo:page-sequence>
 	</xsl:template>
 	<xsl:template match="page">
 		<fo:page-sequence master-reference="A4">
