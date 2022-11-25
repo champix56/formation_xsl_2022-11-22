@@ -34,22 +34,24 @@
 					<fo:table width="20cm">
 						<fo:table-body>
 							<fo:table-row height="13cm">
-								<fo:table-cell width="10cm">
-									<fo:block>ligne 1</fo:block>
-								</fo:table-cell>
-								<fo:table-cell width="10cm">
-									<fo:block>ligne 1 cell 2</fo:block>
-								</fo:table-cell>
+								<xsl:apply-templates select="image[position()&lt;3]"/>
 							</fo:table-row>
-							<fo:table-row height="13cm">
-								<fo:table-cell>
-									<fo:block>ligne 2</fo:block>
-								</fo:table-cell>
-							</fo:table-row>
+							<xsl:if test="count(image)>2">
+								<fo:table-row height="13cm">
+									<xsl:apply-templates select="image[position()&gt;=3]"/>
+								</fo:table-row>
+							</xsl:if>
 						</fo:table-body>
 					</fo:table>
 				</fo:block>
 			</fo:flow>
 		</fo:page-sequence>
+	</xsl:template>
+	<xsl:template match="page/image">
+		<fo:table-cell width="10cm">
+			<fo:block text-align="center">
+				<fo:external-graphic src="{@path}{@href}" content-height="98mm" content-width="98mm" scaling="uniform"/>
+			</fo:block>
+		</fo:table-cell>
 	</xsl:template>
 </xsl:stylesheet>
