@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE cvs SYSTEM "cvsgen.dtd">
+<cvs>
+	<cv id="C165">
+		<ident>
+			<nom>D&euro;SORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<pnom>Joël</pnom>
+			<langues>
+				<langue lu="true" langName="FR"/>
+				<langue langName="EN" lu="true" ecrit="true" parle="false"/>
+				<langue langName="UK" lu="true" ecrit="true" parle="false"/>
+			</langues>
+			<permis>AB</permis>
+			<datenaiss>1984-08-03</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>BTS IG option dev</intitule>
+					</diplome>
+					<diplome obtenu="true">
+						<intitule>Licence pro Assistant chef de projet</intitule>
+					</diplome>
+					<diplome obtenu="false">
+						<intitule>Master chef de projet</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>DAEU - b</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+		</formations>
+	</cv>
+	<cv id="C234">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<langues>
+				<langue langName="FR" lu="true" ecrit="true" parle="true"/>
+				<langue langName="EN" lu="true" ecrit="true" parle="false"/>
+			</langues>
+			<permis>AB</permis>
+			<datenaiss>1984-08-03</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>BTS IG option dev</intitule>
+					</diplome>
+					<diplome obtenu="true">
+						<intitule>Licence pro Assistant chef de projet</intitule>
+					</diplome>
+					<diplome obtenu="false">
+						<intitule>Master chef de projet</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>DAEU - b</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+		</formations>
+	</cv>
+	<best idcv="C165"/>	
+	<selected idcvs="C165 C234"/>
+</cvs>

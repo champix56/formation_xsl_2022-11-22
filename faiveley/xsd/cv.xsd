@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:formation:xml:cv" targetNamespace="urn:formation:xml:cv">
+<xs:include schemaLocation="./ident.xsd"/>
+	<xs:complexType name="CT_dip">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="obtenu" type="xs:boolean"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:element name="formations">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="formation" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="formation">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="deb"/>
+				<xs:element ref="fin"/>
+				<xs:element ref="intitule"/>
+				<xs:element ref="diplomes"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="deb" type="xs:gYear"/>
+	<xs:element name="fin" type="xs:gYear"/>
+	<xs:element name="intitule" type="xs:string"/>
+	<xs:element name="diplomes">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="diplome" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="diplome">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute name="obtenu" type="xs:boolean"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cv">
+		<xs:complexType>
+			<xs:sequence>
+				<!--balises enfants-->
+				<xs:element ref="ident"/>
+				<xs:element ref="formations"/>
+			</xs:sequence>
+			<xs:attribute name="id" type="xs:ID"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cvs">
+		<xs:complexType>
+			<xs:sequence>
+				<!--contenu de balises enfants-->
+				<xs:element ref="cv" maxOccurs="unbounded"/>
+				<xs:sequence minOccurs="0" >
+					<xs:element ref="best"  />
+					<xs:element ref="selected"  />
+				</xs:sequence>
+			</xs:sequence>
+			<!--attrib-->
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="best">
+		<xs:complexType>
+			<xs:attribute name="id" type="xs:IDREF"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="selected">
+		<xs:complexType>
+			<xs:attribute name="idcvs" type="xs:IDREFS"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

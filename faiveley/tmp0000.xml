@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE cvs [
+<!ELEMENT intitule (#PCDATA)>
+<!ELEMENT formations (formation+)>
+<!ELEMENT formation (deb, fin, intitule, diplomes)>
+<!ELEMENT fin (#PCDATA)>
+<!ELEMENT diplomes (diplome+)>
+<!ELEMENT diplome (intitule)>
+<!ATTLIST diplome
+	obtenu CDATA #REQUIRED
+>
+<!ELEMENT dilplomes (diplome*)>
+<!ELEMENT deb (#PCDATA)>
+<!ELEMENT cvs (cv+)>
+<!ELEMENT cv (ident, formations)>
+<!ATTLIST cv
+	id CDATA #REQUIRED
+>
+<!ENTITY euro "&#x20ac;">
+<!ENTITY cub "cube3D 20x20">
+<!ENTITY cyl "cylindre  20x50">
+<!ENTITY % fichierInclusion  SYSTEM "ident.dtd">
+%fichierInclusion;
+<!ENTITY % ownerName "DESORBAIX">
+<!ENTITY % ownerPName "Alexandre">
+
+]>
+<cvs>
+	<cv id="21&quot;65">
+		<ident>
+			<nom>D&euro;SORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<pnom>Joël</pnom>
+			<langues>
+				<langue lu="true" langName="FR"/>
+				<langue langName="EN" lu="true" ecrit="true" parle="false"/>
+				<langue langName="UK" lu="true" ecrit="true" parle="false"/>
+			</langues>
+			<permis>AB</permis>
+			<datenaiss>1984-08-03</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>BTS IG option dev</intitule>
+					</diplome>
+					<diplome obtenu="true">
+						<intitule>Licence pro Assistant chef de projet</intitule>
+					</diplome>
+					<diplome obtenu="false">
+						<intitule>Master chef de projet</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<dilplomes>
+					<diplome obtenu="true">
+						<intitule>DAEU - b</intitule>
+					</diplome>
+				</dilplomes>
+			</formation>
+		</formations>
+	</cv>
+	<cv id="234">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			<pnom>Alexandre</pnom>
+			
+			<langues>
+				<langue langName="FR" lu="true" ecrit="true" parle="true"/>
+				<langue langName="EN" lu="true" ecrit="true" parle="false"/>
+			</langues>
+			<permis>AB</permis>
+			<datenaiss>1984-08-03</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="true">
+						<intitule>BTS IG option dev</intitule>
+					</diplome>
+					<diplome obtenu="true">
+						<intitule>Licence pro Assistant chef de projet</intitule>
+					</diplome>
+					<diplome obtenu="false">
+						<intitule>Master chef de projet</intitule>
+					</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<dilplomes>
+					<diplome obtenu="true">
+						<intitule>DAEU - b</intitule>
+					</diplome>
+				</dilplomes>
+			</formation>
+		</formations>
+	</cv>
+</cvs>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT pnom (#PCDATA)>
+<!ELEMENT permis (#PCDATA)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT langues (langue+)>
+<!ELEMENT langue EMPTY>
+<!ATTLIST langue
+	ecrit CDATA #IMPLIED
+	langName CDATA #REQUIRED
+	lu CDATA #REQUIRED
+	parle CDATA #IMPLIED
+>
+<!ELEMENT datenaiss (#PCDATA)>
+<!ELEMENT tel (#PCDATA)>
+<!ELEMENT mail (#PCDATA)>
+<!ELEMENT fixe (#PCDATA)>
+
+<!ELEMENT ident (nom, pnom,pnom?,pnom?,(  (tel,fixe)|(tel,mail)   )?, langues, permis, datenaiss)>

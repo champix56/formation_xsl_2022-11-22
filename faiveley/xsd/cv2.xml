@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<cvs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:formation:xml:cv cv.xsd"  xmlns:cv="urn:formation:xml:cv"   xmlns="urn:formation:xml:cv">
+	<cv id="C165">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<pnom>Joël</pnom>
+			<langues>
+				<langue lu="true" cv:ecrit="true" cv:parle="false">FR</langue>
+				<langue lu="true" cv:ecrit="true" cv:parle="false">EN</langue>
+				<langue  lu="true" cv:ecrit="true" cv:parle="false">UK</langue>
+			</langues>
+			<permis>A</permis>
+			<datenaiss>1984-12-25</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="1">BTS IG option dev</diplome>
+					<diplome obtenu="true">Licence pro Assistant chef de projet</diplome>
+					<diplome obtenu="false">Master chef de projet</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="1">BTS IG option dev</diplome>
+					<diplome obtenu="true">Licence pro Assistant chef de projet</diplome>
+					<diplome obtenu="false">Master chef de projet</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes>
+					<diplome obtenu="1">BTS IG option dev</diplome>
+					<diplome obtenu="true">Licence pro Assistant chef de projet</diplome>
+					<diplome obtenu="false">Master chef de projet</diplome>
+				</diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<diplomes>
+					<diplome obtenu="true">DAEU - b</diplome>
+				</diplomes>
+			</formation>
+		</formations>
+	</cv>
+	<cv id="C234">
+		<ident>
+			<nom>DESORBAIX</nom>
+			<pnom>Alexandre</pnom>
+			<pnom>Dominique</pnom>
+			<langues>
+					<langue lu="true" cv:ecrit="true" cv:parle="false">FR</langue>
+				<langue lu="true" cv:ecrit="true" cv:parle="false">EN</langue>
+			</langues>
+			<permis>AB</permis>
+			<datenaiss>1984-08-03</datenaiss>
+		</ident>
+		<formations>
+			<formation>
+				<deb>2005</deb>
+				<fin>2010</fin>
+				<intitule>Centre formation privé EVRY</intitule>
+				<diplomes></diplomes>
+			</formation>
+			<formation>
+				<deb>2004</deb>
+				<fin>2005</fin>
+				<intitule>Fac de versailles</intitule>
+				<diplomes>
+					<diplome obtenu="true">DAEU - b</diplome>
+				</diplomes>
+			</formation>
+		</formations>
+	</cv>
+	<best id="C165"/>
+	<selected idcvs="C165 C234"/>
+</cvs>

@@ -1,0 +1,15 @@
+<!ELEMENT cvs (cv+,(best,selected))>
+<!ELEMENT cv (ident,formations)>
+<!ELEMENT ident (nom, pnom,pnom?,pnom?, langues, permis, datenaiss)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT pnom (#PCDATA)>
+<!ELEMENT permis (#PCDATA)>
+<!ELEMENT datenaiss (#PCDATA)>
+<!ELEMENT langues (langue)>
+<!ELEMENT langue EMPTY>
+<!ATTLIST langue
+		langName CDATA #REQUIRED
+		lu (true|flase) #IMPLIED
+		ecrit (true|flase) #IMPLIED
+		parle (true|flase) #IMPLIED
+>
